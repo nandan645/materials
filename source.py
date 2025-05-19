@@ -108,4 +108,4 @@ def scrape_pages(start_page=1, max_pages=5):
     print("[DONE] Scraping finished.")
 
 # Start scraping
-scrape_pages(start_page=1, max_pages=5)
+scrape_pages(start_page=1, max_pages=20)
