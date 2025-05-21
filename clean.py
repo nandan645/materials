@@ -41,7 +41,7 @@ from pathlib import Path
 
 # File paths
 JSON_PATH = Path("nature_articles.json")
-URL_LIST_PATH = Path("pdf_urls.txt")  # Changed output file name for clarity
+URL_LIST_PATH = Path("new_pdf_urls.txt")  # Changed output file name for clarity
 
 def main():
     try:
@@ -51,7 +51,7 @@ def main():
         print(f"[ERROR] Failed to load JSON: {e}")
         return
 
-    open_access_articles = [a for a in articles if a.get("Open Access") == "Yes"]
+    open_access_articles = [a for a in articles if a.get("Open Access") == "No"]
 
     if not open_access_articles:
         print("[INFO] No Open Access articles found.")
