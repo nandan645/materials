@@ -94,8 +94,8 @@ def scrape_pages(start_page=1, max_pages=5):
                 articles = parse_articles_from_html(html)
 
                 if not articles:
-                    print("[INFO] No new articles found on this page. Stopping.")
-                    break
+                    print("[INFO] No new articles found on this page. Skipping.")
+                    # break
 
                 save_articles(articles)
 
@@ -108,4 +108,4 @@ def scrape_pages(start_page=1, max_pages=5):
     print("[DONE] Scraping finished.")
 
 # Start scraping
-scrape_pages(start_page=1, max_pages=20)
+scrape_pages(start_page=1, max_pages=7)
